@@ -21,8 +21,16 @@ namespace pryDiFiniGUI
         int indice = 0;
         private void btnDerecha_Click(object sender, EventArgs e)
         {
-            indice++;
-            lblDatos.Text = vecNombres[indice];
+           
+            if (indice < vecNombres.Length-1)
+            {
+                indice++;
+                lblDatos.Text = vecNombres[indice];
+            }
+            else
+            {
+                btnDerecha.Enabled = false;
+            }
         }
 
         private void frmbotonera_Load(object sender, EventArgs e)
@@ -32,12 +40,27 @@ namespace pryDiFiniGUI
             vecNombres[2] = "Jose";
 
             lblDatos.Text = vecNombres[0];
+
         }
 
         private void btnIzquierda_Click(object sender, EventArgs e)
         {
-            indice=indice-1;
-            lblDatos.Text = vecNombres[indice];
+            
+            if (indice > 0)
+            {
+                indice--;
+                lblDatos.Text = vecNombres[indice];
+            }
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            while (indice < vecNombres.Length) 
+            {
+                cmbNombres.Text = vecNombres[indice];
+                indice++;
+            }
         }
     }
 }

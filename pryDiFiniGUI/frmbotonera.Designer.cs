@@ -31,6 +31,7 @@
             lblDatos = new Label();
             btnIzquierda = new Button();
             btnDerecha = new Button();
+            cmbNombres = new ComboBox();
             SuspendLayout();
             // 
             // lblDatos
@@ -67,11 +68,21 @@
             btnDerecha.UseVisualStyleBackColor = false;
             btnDerecha.Click += btnDerecha_Click;
             // 
+            // cmbNombres
+            // 
+            cmbNombres.FormattingEnabled = true;
+            cmbNombres.Location = new Point(158, 229);
+            cmbNombres.Name = "cmbNombres";
+            cmbNombres.Size = new Size(121, 23);
+            cmbNombres.TabIndex = 3;
+            cmbNombres.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
             // frmbotonera
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(484, 461);
+            Controls.Add(cmbNombres);
             Controls.Add(btnDerecha);
             Controls.Add(btnIzquierda);
             Controls.Add(lblDatos);
@@ -88,5 +99,6 @@
         private Label lblDatos;
         private Button btnIzquierda;
         private Button btnDerecha;
+        private ComboBox cmbNombres;
     }
 }
