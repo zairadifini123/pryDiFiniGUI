@@ -6,5 +6,11 @@ namespace pryDiFiniGUI
         {
             InitializeComponent();
         }
+
+        private void btnBotonera_Click(object sender, EventArgs e)
+        {
+            frmbotonera ventanaBotonera = new frmbotonera();
+            ventanaBotonera.Show(); 
+        }
     }
 }

@@ -30,13 +30,13 @@
         {
             lblDatos = new Label();
             btnIzquierda = new Button();
-            button1 = new Button();
+            btnDerecha = new Button();
             SuspendLayout();
             // 
             // lblDatos
             // 
             lblDatos.AutoSize = true;
-            lblDatos.Location = new Point(197, 77);
+            lblDatos.Location = new Point(189, 92);
             lblDatos.Name = "lblDatos";
             lblDatos.Size = new Size(64, 15);
             lblDatos.TabIndex = 0;
@@ -44,36 +44,41 @@
             // 
             // btnIzquierda
             // 
+            btnIzquierda.BackColor = SystemColors.ActiveCaption;
             btnIzquierda.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnIzquierda.Location = new Point(135, 141);
             btnIzquierda.Name = "btnIzquierda";
             btnIzquierda.Size = new Size(84, 72);
             btnIzquierda.TabIndex = 1;
             btnIzquierda.Text = " ←";
-            btnIzquierda.UseVisualStyleBackColor = true;
+            btnIzquierda.UseVisualStyleBackColor = false;
+            btnIzquierda.Click += btnIzquierda_Click;
             // 
-            // button1
+            // btnDerecha
             // 
-            button1.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(225, 141);
-            button1.Name = "button1";
-            button1.Size = new Size(84, 72);
-            button1.TabIndex = 2;
-            button1.Text = " →";
-            button1.UseVisualStyleBackColor = true;
+            btnDerecha.BackColor = SystemColors.ActiveCaption;
+            btnDerecha.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDerecha.ForeColor = SystemColors.ActiveCaptionText;
+            btnDerecha.Location = new Point(225, 141);
+            btnDerecha.Name = "btnDerecha";
+            btnDerecha.Size = new Size(84, 72);
+            btnDerecha.TabIndex = 2;
+            btnDerecha.Text = " →";
+            btnDerecha.UseVisualStyleBackColor = false;
+            btnDerecha.Click += btnDerecha_Click;
             // 
             // frmbotonera
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(484, 461);
-            Controls.Add(button1);
+            Controls.Add(btnDerecha);
             Controls.Add(btnIzquierda);
             Controls.Add(lblDatos);
             Name = "frmbotonera";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmbotonera";
+            Load += frmbotonera_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -82,6 +87,6 @@
 
         private Label lblDatos;
         private Button btnIzquierda;
-        private Button button1;
+        private Button btnDerecha;
     }
 }
