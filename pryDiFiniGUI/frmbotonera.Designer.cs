@@ -32,6 +32,8 @@
             btnIzquierda = new Button();
             btnDerecha = new Button();
             cmbNombres = new ComboBox();
+            btnPrimero = new Button();
+            btnUltimo = new Button();
             SuspendLayout();
             // 
             // lblDatos
@@ -77,11 +79,35 @@
             cmbNombres.TabIndex = 3;
             cmbNombres.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
+            // btnPrimero
+            // 
+            btnPrimero.BackColor = SystemColors.ActiveCaption;
+            btnPrimero.Location = new Point(45, 141);
+            btnPrimero.Name = "btnPrimero";
+            btnPrimero.Size = new Size(84, 72);
+            btnPrimero.TabIndex = 4;
+            btnPrimero.Text = "Primero";
+            btnPrimero.UseVisualStyleBackColor = false;
+            btnPrimero.Click += btnPrimero_Click;
+            // 
+            // btnUltimo
+            // 
+            btnUltimo.BackColor = SystemColors.ActiveCaption;
+            btnUltimo.Location = new Point(315, 141);
+            btnUltimo.Name = "btnUltimo";
+            btnUltimo.Size = new Size(84, 72);
+            btnUltimo.TabIndex = 5;
+            btnUltimo.Text = "Ultimo";
+            btnUltimo.UseVisualStyleBackColor = false;
+            btnUltimo.Click += btnUltimo_Click;
+            // 
             // frmbotonera
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(484, 461);
+            Controls.Add(btnUltimo);
+            Controls.Add(btnPrimero);
             Controls.Add(cmbNombres);
             Controls.Add(btnDerecha);
             Controls.Add(btnIzquierda);
@@ -100,5 +126,7 @@
         private Button btnIzquierda;
         private Button btnDerecha;
         private ComboBox cmbNombres;
+        private Button btnPrimero;
+        private Button btnUltimo;
     }
 }

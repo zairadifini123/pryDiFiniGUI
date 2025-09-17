@@ -25,17 +25,17 @@ namespace pryDiFiniGUI
             if (vecNombres.Length > indice)
             {
                 lblDatos.Text = vecNombres[indice];
-                if ((indice + 1) == vecNombres.Length) 
+                if ((indice + 1) == vecNombres.Length)
                 {
                     btnDerecha.Enabled = false;
                 }
 
-                if (indice>0)
+                if (indice > 0)
                 {
                     btnIzquierda.Enabled = true;
                 }
             }
-            
+
         }
 
         private void frmbotonera_Load(object sender, EventArgs e)
@@ -46,11 +46,18 @@ namespace pryDiFiniGUI
 
             lblDatos.Text = vecNombres[0];
 
+            int IndiceCombo = 0;
+
+            while (IndiceCombo < vecNombres.Length) 
+            {
+                cmbNombres.Items.Add(vecNombres[IndiceCombo]);
+                IndiceCombo++;
+            } 
         }
 
         private void btnIzquierda_Click(object sender, EventArgs e)
         {
-            
+
             if (indice > 0)
             {
                 indice--;
@@ -62,11 +69,28 @@ namespace pryDiFiniGUI
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            while (indice < vecNombres.Length) 
-            {
-                cmbNombres.Text = vecNombres[indice];
-                indice++;
-            }
+            
+        }
+
+        private void btnPrimero_Click(object sender, EventArgs e)
+        {
+            indice = 0;
+            lblDatos.Text = vecNombres[0];
+            btnDerecha.Enabled = true;
+            btnIzquierda.Enabled = false;
+            //indice++;
+           
+
+        }
+
+        private void btnUltimo_Click(object sender, EventArgs e)
+        {
+            indice = 2;
+            lblDatos.Text = vecNombres[vecNombres.Length - 1];
+            btnDerecha.Enabled = false;
+            btnIzquierda.Enabled = true;
+
+            
         }
     }
 }
