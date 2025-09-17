@@ -12,13 +12,14 @@ namespace pryDiFiniGUI
 {
     public partial class frmbotonera : Form
     {
+        public string[] vecNombres = new string[3];
+        int indice = 0;
         public frmbotonera()
         {
             InitializeComponent();
         }
 
-        string[] vecNombres = new string[3];
-        int indice = 0;
+       
         private void btnDerecha_Click(object sender, EventArgs e)
         {
             indice++;

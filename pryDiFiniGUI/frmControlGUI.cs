@@ -10,7 +10,11 @@ namespace pryDiFiniGUI
         private void btnBotonera_Click(object sender, EventArgs e)
         {
             frmbotonera ventanaBotonera = new frmbotonera();
-            ventanaBotonera.Show(); 
+            ventanaBotonera.vecNombres[0] = "Hola"; 
+            ventanaBotonera.Show();
+
+            int IndiceVectorNombres = 0;
+           
         }
     }
 }
