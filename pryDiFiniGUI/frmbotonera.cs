@@ -21,16 +21,21 @@ namespace pryDiFiniGUI
         int indice = 0;
         private void btnDerecha_Click(object sender, EventArgs e)
         {
-           
-            if (indice < vecNombres.Length-1)
+            indice++;
+            if (vecNombres.Length > indice)
             {
-                indice++;
                 lblDatos.Text = vecNombres[indice];
+                if ((indice + 1) == vecNombres.Length) 
+                {
+                    btnDerecha.Enabled = false;
+                }
+
+                if (indice>0)
+                {
+                    btnIzquierda.Enabled = true;
+                }
             }
-            else
-            {
-                btnDerecha.Enabled = false;
-            }
+            
         }
 
         private void frmbotonera_Load(object sender, EventArgs e)
@@ -50,6 +55,7 @@ namespace pryDiFiniGUI
             {
                 indice--;
                 lblDatos.Text = vecNombres[indice];
+                btnDerecha.Enabled = true;
             }
 
         }
