@@ -9,12 +9,30 @@ namespace pryDiFiniGUI
 
         private void btnBotonera_Click(object sender, EventArgs e)
         {
+            // Crear la ventana
             frmbotonera ventanaBotonera = new frmbotonera();
-            ventanaBotonera.vecNombres[0] = "Hola"; 
+
+            // Agregar "Hola" a la primera posición vacía del vector
+            for (int i = 0; i < ventanaBotonera.vecNombres.Length; i++)
+            {
+                if (string.IsNullOrEmpty(ventanaBotonera.vecNombres[i]))
+                {
+                    ventanaBotonera.vecNombres[i] = "Hola";
+                    break;
+                }
+            }
+
+            // Agregar "Hola" al ListBox lstResultados en este formulario
+            lstResultados.Items.Add("Hola");
+
+            // Mostrar el formulario frmbotonera
             ventanaBotonera.Show();
 
-            int IndiceVectorNombres = 0;
-           
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

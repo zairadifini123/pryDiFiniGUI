@@ -53,7 +53,9 @@ namespace pryDiFiniGUI
             {
                 cmbNombres.Items.Add(vecNombres[IndiceCombo]);
                 IndiceCombo++;
-            } 
+            }
+
+            
         }
 
         private void btnIzquierda_Click(object sender, EventArgs e)
